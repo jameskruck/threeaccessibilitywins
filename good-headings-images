@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Good Headings & Images</title>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <h2>Subheading with Proper Hierarchy</h2>
+  <p>This page uses correct heading order and provides alt text for images.</p>
+  <img src="chart.png" alt="Bar chart showing sales growth from Q1 to Q2 for North and South regions">
+</body>
+</html>
