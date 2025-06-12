@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility Examples Home</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+    nav a {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 0.5rem;
+    }
+    img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Accessibility Examples Index</h1>
+  <nav>
+    <a href="bad-table.html">Bad Table Example</a>
+    <a href="good-table.html">Good Table Example</a>
+    <a href="bad-headings-images.html">Bad Headings & Images Example</a>
+    <a href="good-headings-images.html">Good Headings & Images Example</a>
+  </nav>
+</body>
+</html>
