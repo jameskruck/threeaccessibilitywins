@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Table Example - Accessibility Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Accessible Data Table</h1>
+        <p>This page demonstrates the same table with all accessibility problems fixed.</p>
+    </header>
+
+    <nav class="navigation">
+        <h2>Navigate Examples</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bad-table.html">1. Inaccessible Table</a></li>
+            <li><a href="good-table.html" class="current">2. Accessible Table</a></li>
+            <li><a href="bad-content.html">3. Inaccessible Content</a></li>
+            <li><a href="good-content.html">4. Accessible Content</a></li>
+            <li><a href="alt-text-examples.html">5. Alt Text Examples</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="example-label good-example">✅ GOOD EXAMPLE</div>
+        
+        <h2>Sales Data Table - Accessible Version</h2>
+        <p>This table contains the same quarterly sales data, but now includes proper accessibility features that make it usable for everyone.</p>
+
+        <table class="good-table">
+            <caption>Q1 2024 Sales Data by Department</caption>
+            <thead>
+                <tr>
+                    <th scope="col" rowspan="2">Department</th>
+                    <th scope="colgroup" colspan="3">Monthly Sales</th>
+                    <th scope="col" rowspan="2">Q1 Total</th>
+                </tr>
+                <tr>
+                    <th scope="col">January</th>
+                    <th scope="col">February</th>
+                    <th scope="col">March</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Marketing</th>
+                    <td>$45,000</td>
+                    <td>$52,000</td>
+                    <td>$48,000</td>
+                    <td>$145,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sales</th>
+                    <td>$67,000</td>
+                    <td>$71,000</td>
+                    <td>$69,000</td>
+                    <td>$207,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">Support</th>
+                    <td>$23,000</td>
+                    <td>$28,000</td>
+                    <td>$31,000</td>
+                    <td>$82,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="solution-list">
+            <h3>Accessibility Improvements Made</h3>
+            <ul>
+                <li><strong>Proper &lt;th&gt; elements:</strong> All headers now use &lt;th&gt; instead of &lt;td&gt; elements</li>
+                <li><strong>Scope attributes:</strong> Headers specify whether they apply to columns, rows, or column groups</li>
+                <li><strong>Table caption:</strong> Describes what the table contains for screen reader users</li>
+                <li><strong>Semantic structure:</strong> Uses &lt;thead&gt; and &lt;tbody&gt; to clearly separate headers from data</li>
+                <li><strong>Clear relationships:</strong> Screen readers can now announce the appropriate headers when navigating to any data cell</li>
+            </ul>
+        </div>
+
+        <h3>Screen Reader Experience</h3>
+        <p><strong>Now screen reader users can:</strong></p>
+        <ul>
+            <li><strong>Understand context:</strong> The caption tells them this is "Q1 2024 Sales Data by Department"</li>
+            <li><strong>Navigate efficiently:</strong> Jump between headers using table navigation commands</li>
+            <li><strong>Hear relationships:</strong> When focused on "$52,000", they hear "Marketing, February, $52,000"</li>
+            <li><strong>Get orientation:</strong> Know they're in row 2 of 4, column 3 of 5</li>
+        </ul>
+
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 6px; margin: 20px 0;">
+            <h4>Workshop Activity</h4>
+            <p><strong>Compare the Experience:</strong></p>
+            <ol>
+                <li>Use a screen reader to navigate this table - notice how much clearer the relationships are</li>
+                <li>Run WAVE on both the bad and good table pages to see the difference in errors</li>
+                <li>Try keyboard navigation - use arrow keys to move between cells efficiently</li>
+                <li>Ask participants: "What specific changes made the biggest difference?"</li>
+            </ol>
+        </div>
+
+        <h3>Technical Implementation</h3>
+        <p>Key code changes that made this table accessible:</p>
+        
+        <pre style="background: #f8f9fa; padding: 15px; border-radius: 4px; overflow-x: auto;"><code>&lt;table&gt;
+  &lt;caption&gt;Q1 2024 Sales Data by Department&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col" rowspan="2"&gt;Department&lt;/th&gt;
+      &lt;th scope="colgroup" colspan="3"&gt;Monthly Sales&lt;/th&gt;
+      &lt;th scope="col" rowspan="2"&gt;Q1 Total&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;January&lt;/th&gt;
+      &lt;th scope="col"&gt;February&lt;/th&gt;
+      &lt;th scope="col"&gt;March&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Marketing&lt;/th&gt;
+      &lt;td&gt;$45,000&lt;/td&gt;
+      &lt;td&gt;$52,000&lt;/td&gt;
+      &lt;td&gt;$48,000&lt;/td&gt;
+      &lt;td&gt;$145,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;!-- Additional rows... --&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+        <div style="display: flex; gap: 20px; margin: 30px 0; flex-wrap: wrap;">
+            <p><a href="bad-table.html" style="background: #dc3545; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">← See the Problems</a></p>
+            <p><a href="bad-content.html" style="background: #0066cc; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">Next: Content Issues →</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Back to Workshop Home</a></p>
+    </footer>
+</body>
+</html>

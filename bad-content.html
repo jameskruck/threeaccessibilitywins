@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Content Example - Accessibility Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inaccessible Content Structure</h1>
+        <p>This page demonstrates common content accessibility problems including poor heading hierarchy, low contrast, and missing alt text.</p>
+    </header>
+
+    <nav class="navigation">
+        <h2>Navigate Examples</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bad-table.html">1. Inaccessible Table</a></li>
+            <li><a href="good-table.html">2. Accessible Table</a></li>
+            <li><a href="bad-content.html" class="current">3. Inaccessible Content</a></li>
+            <li><a href="good-content.html">4. Accessible Content</a></li>
+            <li><a href="alt-text-examples.html">5. Alt Text Examples</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="example-label bad-example">❌ BAD EXAMPLE</div>
+        
+        <h2>Course Content with Multiple Issues</h2>
+        <p>This represents typical course content that looks fine visually but has serious accessibility barriers.</p>
+
+        <div class="bad-content">
+            <h1>Course Overview</h1>
+            
+            <div class="fake-header">Learning Objectives</div>
+            <p style="color: #ccc;">By the end of this course, students will be able to identify key concepts and apply them in real-world scenarios. This text is very light gray and difficult to read.</p>
+            
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%23e0e0e0'/%3E%3Cpath d='M 50 150 L 100 100 L 150 120 L 200 80 L 250 110 L 300 90 L 350 130' stroke='%23666' stroke-width='3' fill='none'/%3E%3Crect x='40' y='140' width='20' height='20' fill='%23ff6b6b'/%3E%3Crect x='90' y='90' width='20' height='20' fill='%234ecdc4'/%3E%3Crect x='140' y='110' width='20' height='20' fill='%2345b7d1'/%3E%3Crect x='190' y='70' width='20' height='20' fill='%23f9ca24'/%3E%3Crect x='240' y='100' width='20' height='20' fill='%23f0932b'/%3E%3Crect x='290' y='80' width='20' height='20' fill='%23eb4d4b'/%3E%3Crect x='340' y='120' width='20' height='20' fill='%236c5ce7'/%3E%3Ctext x='200' y='25' text-anchor='middle' fill='%23333' font-size='16'%3EQuarterly Performance Data%3C/text%3E%3C/svg%3E" class="content-image">
+            
+            <h2>Module 1</h2>
+            <p>This module covers the basics. The content structure here is problematic.</p>
+            
+            <div class="fake-header">Assignment Instructions</div>
+            <p style="color: #aaa;">Submit your work by clicking the button below. Make sure to follow all requirements. This text is also very light and hard to read for people with vision issues.</p>
+            
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect width='200' height='150' fill='%23f0f0f0'/%3E%3Ccircle cx='100' cy='75' r='30' fill='%23ffd93d'/%3E%3Ccircle cx='90' cy='65' r='3' fill='%23333'/%3E%3Ccircle cx='110' cy='65' r='3' fill='%23333'/%3E%3Cpath d='M 85 85 Q 100 95 115 85' stroke='%23333' stroke-width='2' fill='none'/%3E%3Ctext x='100' y='130' text-anchor='middle' fill='%23666' font-size='12'%3EDecorative Smiley%3C/text%3E%3C/svg%3E" class="content-image">
+            
+            <h1>Important Notice</h1>
+            <p style="background: yellow; color: orange; padding: 10px;">This is critical information that all students must read! The yellow background with orange text creates poor contrast.</p>
+            
+            <div class="fake-header">Additional Resources</div>
+            <p style="color: #ddd;">Here are some links to external resources. This text is extremely light gray and nearly invisible.</p>
+        </div>
+
+        <div class="problem-list">
+            <h3>Accessibility Problems in This Content</h3>
+            <ul>
+                <li><strong>Poor heading hierarchy:</strong> Multiple H1 tags used incorrectly, fake headers using div elements</li>
+                <li><strong>Low contrast text:</strong> Light gray text (#ccc, #aaa, #ddd) fails WCAG contrast requirements</li>
+                <li><strong>Missing alt text:</strong> Images have no alternative descriptions for screen readers</li>
+                <li><strong>Poor color contrast:</strong> Yellow background with orange text is unreadable</li>
+                <li><strong>Semantic structure:</strong> Important content sections not marked up as proper headings</li>
+                <li><strong>No image context:</strong> Users can't understand what the chart or decorative image represent</li>
+            </ul>
+        </div>
+
+        <h3>Impact on Users</h3>
+        
+        <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 6px; margin: 20px 0;">
+            <h4>⚠️ Real User Impact</h4>
+            <ul>
+                <li><strong>Screen reader users:</strong> Cannot navigate by headings, miss important sections</li>
+                <li><strong>Low vision users:</strong> Cannot read light gray text, even with magnification</li>
+                <li><strong>Colorblind users:</strong> May not be able to distinguish yellow/orange warning text</li>
+                <li><strong>Cognitive disabilities:</strong> Poor structure makes content hard to scan and understand</li>
+                <li><strong>Keyboard users:</strong> Cannot access content that's only conveyed through images</li>
+            </ul>
+        </div>
+
+        <h3>Try This</h3>
+        <ol>
+            <li><strong>Contrast Checker:</strong> Use a contrast analyzer on the light gray text - see how badly it fails</li>
+            <li><strong>Screen Reader:</strong> Try navigating by headings - notice the confusing structure</li>
+            <li><strong>WAVE Tool:</strong> Run WAVE to see all the contrast and structural errors</li>
+            <li><strong>Zoom Test:</strong> Zoom to 200% and try to read the light text</li>
+        </ol>
+
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 6px; margin: 20px 0;">
+            <h4>Workshop Activity</h4>
+            <p><strong>Problem Identification:</strong></p>
+            <ol>
+                <li>Have participants identify as many accessibility issues as they can find</li>
+                <li>Ask them to prioritize which problems would have the biggest impact on users</li>
+                <li>Discuss how these issues commonly appear in LMS content and course materials</li>
+                <li>Before showing the solution, have them brainstorm fixes for each problem</li>
+            </ol>
+        </div>
+
+        <p><a href="good-content.html" style="background: #1e7e34; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">→ See the Accessible Version</a></p>
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Back to Workshop Home</a></p>
+    </footer>
+</body>
+</html>

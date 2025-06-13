@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Content Example - Accessibility Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Accessible Content Structure</h1>
+        <p>This page demonstrates the same content with all accessibility issues resolved.</p>
+    </header>
+
+    <nav class="navigation">
+        <h2>Navigate Examples</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bad-table.html">1. Inaccessible Table</a></li>
+            <li><a href="good-table.html">2. Accessible Table</a></li>
+            <li><a href="bad-content.html">3. Inaccessible Content</a></li>
+            <li><a href="good-content.html" class="current">4. Accessible Content</a></li>
+            <li><a href="alt-text-examples.html">5. Alt Text Examples</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="example-label good-example">✅ GOOD EXAMPLE</div>
+        
+        <h2>Course Content - Accessible Version</h2>
+        <p>This represents the same course content with proper accessibility features that make it usable for everyone.</p>
+
+        <div class="good-content">
+            <h1>Course Overview</h1>
+            
+            <h2>Learning Objectives</h2>
+            <p>By the end of this course, students will be able to identify key concepts and apply them in real-world scenarios. All text now meets WCAG contrast requirements and is easy to read.</p>
+            
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%23e0e0e0'/%3E%3Cpath d='M 50 150 L 100 100 L 150 120 L 200 80 L 250 110 L 300 90 L 350 130' stroke='%23666' stroke-width='3' fill='none'/%3E%3Crect x='40' y='140' width='20' height='20' fill='%23ff6b6b'/%3E%3Crect x='90' y='90' width='20' height='20' fill='%234ecdc4'/%3E%3Crect x='140' y='110' width='20' height='20' fill='%2345b7d1'/%3E%3Crect x='190' y='70' width='20' height='20' fill='%23f9ca24'/%3E%3Crect x='240' y='100' width='20' height='20' fill='%23f0932b'/%3E%3Crect x='290' y='80' width='20' height='20' fill='%23eb4d4b'/%3E%3Crect x='340' y='120' width='20' height='20' fill='%236c5ce7'/%3E%3Ctext x='200' y='25' text-anchor='middle' fill='%23333' font-size='16'%3EQuarterly Performance Data%3C/text%3E%3C/svg%3E" 
+                 alt="Line chart showing quarterly performance data with an upward trend. Q1 started at 40%, Q2 rose to 60%, Q3 dipped to 50%, and Q4 reached 70%. Each data point is marked with colored squares." 
+                 class="content-image">
+            
+            <h2>Module 1: Fundamentals</h2>
+            <p>This module covers the foundational concepts you'll need for the rest of the course, including key terminology and basic principles.</p>
+            
+            <h3>Assignment Instructions</h3>
+            <p>Submit your work using the submission portal by the end of the week. Your assignment should include:</p>
+            <ul>
+                <li>A written analysis (500-750 words)</li>
+                <li>Supporting data or examples from the readings</li>
+                <li>Proper citations in APA format</li>
+                <li>A reflection on how you'll apply these concepts</li>
+            </ul>
+            
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect width='200' height='150' fill='%23f0f0f0'/%3E%3Ccircle cx='100' cy='75' r='30' fill='%23ffd93d'/%3E%3Ccircle cx='90' cy='65' r='3' fill='%23333'/%3E%3Ccircle cx='110' cy='65' r='3' fill='%23333'/%3E%3Cpath d='M 85 85 Q 100 95 115 85' stroke='%23333' stroke-width='2' fill='none'/%3E%3Ctext x='100' y='130' text-anchor='middle' fill='%23666' font-size='12'%3EDecorative Smiley%3C/text%3E%3C/svg%3E" 
+                 alt="" 
+                 role="presentation"
+                 class="content-image">
+            
+            <h2>Important Notice</h2>
+            <div style="background: #fff3cd; color: #856404; padding: 15px; border: 1px solid #ffeaa7; border-radius: 5px; margin: 20px 0;">
+                <strong>⚠️ Important:</strong> This is critical information that all students must read! Please review the updated course policies in your student handbook before the next class session.
+            </div>
+            
+            <h3>Additional Resources</h3>
+            <p>Here are some helpful resources to supplement your learning:</p>
+            <ul>
+                <li><a href="#" style="color: #0066cc;">Course Textbook Online Companion</a></li>
+                <li><a href="#" style="color: #0066cc;">Video Tutorials and Examples</a></li>
+                <li><a href="#" style="color: #0066cc;">Practice Exercises and Quizzes</a></li>
+                <li><a href="#" style="color: #0066cc;">Discussion Forum for Questions</a></li>
+            </ul>
+        </div>
+
+        <div class="solution-list">
+            <h3>Accessibility Improvements Made</h3>
+            <ul>
+                <li><strong>Proper heading hierarchy:</strong> Single H1, logical H2/H3 structure that screen readers can navigate</li>
+                <li><strong>High contrast text:</strong> All text meets WCAG AA contrast standards (4.5:1 or higher)</li>
+                <li><strong>Descriptive alt text:</strong> Informative images have detailed, meaningful descriptions</li>
+                <li><strong>Decorative images marked:</strong> Decorative images have empty alt="" and role="presentation"</li>
+                <li><strong>Accessible notifications:</strong> Warning messages use proper contrast and clear language</li>
+                <li><strong>Semantic structure:</strong> All headings use proper HTML markup instead of styled divs</li>
+            </ul>
+        </div>
+
+        <h3>Screen Reader Experience</h3>
+        <p><strong>Now screen reader users can:</strong></p>
+        <ul>
+            <li><strong>Navigate by headings:</strong> Jump between sections using H1, H2, H3 structure</li>
+            <li><strong>Understand images:</strong> Hear detailed descriptions of charts and skip decorative elements</li>
+            <li><strong>Read all content:</strong> No text is too light or low-contrast to access</li>
+            <li><strong>Get context:</strong> Important notices are clearly marked and easy to identify</li>
+        </ul>
+
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 6px; margin: 20px 0;">
+            <h4>Workshop Activity</h4>
+            <p><strong>Compare the Experience:</strong></p>
+            <ol>
+                <li>Use a screen reader to navigate by headings - notice the logical flow</li>
+                <li>Run a contrast checker on both versions - see the dramatic difference</li>
+                <li>Try the WAVE tool on both pages to compare the number of errors</li>
+                <li>Ask participants: "Which specific changes would help the most users?"</li>
+            </ol>
+        </div>
+
+        <h3>Key Takeaways</h3>
+        <div style="background: #d1ecf1; border: 1px solid #bee5eb; padding: 20px; border-radius: 6px; margin: 20px 0;">
+            <h4>Essential Content Accessibility Principles</h4>
+            <ul>
+                <li><strong>Structure matters:</strong> Proper headings create a roadmap for all users</li>
+                <li><strong>Contrast is critical:</strong> Text must be readable under all conditions</li>
+                <li><strong>Images need context:</strong> Every image should either inform or be marked as decorative</li>
+                <li><strong>Consistency helps:</strong> Use the same patterns throughout your content</li>
+                <li><strong>Test with real tools:</strong> Accessibility checkers catch issues you might miss</li>
+            </ul>
+        </div>
+
+        <h3>Implementation in Your LMS</h3>
+        <p>These same principles apply whether you're creating content in:</p>
+        <ul>
+            <li><strong>Canvas, Blackboard, Moodle:</strong> Use the built-in heading styles, not just bold text</li>
+            <li><strong>Word documents:</strong> Use Styles panel for headings, check contrast before converting to PDF</li>
+            <li><strong>PowerPoint:</strong> Use slide layouts with proper heading structure, add alt text to images</li>
+            <li><strong>HTML pages:</strong> Follow semantic markup practices shown in this example</li>
+        </ul>
+
+        <div style="display: flex; gap: 20px; margin: 30px 0; flex-wrap: wrap;">
+            <p><a href="bad-content.html" style="background: #dc3545; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">← See the Problems</a></p>
+            <p><a href="alt-text-examples.html" style="background: #6f42c1; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">Next: Alt Text Workshop →</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Back to Workshop Home</a></p>
+    </footer>
+</body>
+</html>
