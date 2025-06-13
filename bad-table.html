@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Table Example - Accessibility Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inaccessible Data Table</h1>
+        <p>This page demonstrates a table with multiple accessibility problems.</p>
+    </header>
+
+    <nav class="navigation">
+        <h2>Navigate Examples</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bad-table.html" class="current">1. Inaccessible Table</a></li>
+            <li><a href="good-table.html">2. Accessible Table</a></li>
+            <li><a href="bad-content.html">3. Inaccessible Content</a></li>
+            <li><a href="good-content.html">4. Accessible Content</a></li>
+            <li><a href="alt-text-examples.html">5. Alt Text Examples</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="example-label bad-example">❌ BAD EXAMPLE</div>
+        
+        <h2>Sales Data Table</h2>
+        <p>This table contains quarterly sales data but has several accessibility issues that make it difficult or impossible for screen reader users to understand.</p>
+
+        <table class="bad-table">
+            <tr class="header-row">
+                <td rowspan="2">Department</td>
+                <td colspan="3">Q1 Sales Data</td>
+                <td rowspan="2">Total</td>
+            </tr>
+            <tr class="header-row">
+                <td>January</td>
+                <td>February</td>
+                <td>March</td>
+            </tr>
+            <tr>
+                <td>Marketing</td>
+                <td>$45,000</td>
+                <td>$52,000</td>
+                <td>$48,000</td>
+                <td>$145,000</td>
+            </tr>
+            <tr>
+                <td>Sales</td>
+                <td>$67,000</td>
+                <td>$71,000</td>
+                <td>$69,000</td>
+                <td>$207,000</td>
+            </tr>
+            <tr>
+                <td>Support</td>
+                <td>$23,000</td>
+                <td>$28,000</td>
+                <td>$31,000</td>
+                <td>$82,000</td>
+            </tr>
+        </table>
+
+        <div class="problem-list">
+            <h3>Problems with This Table</h3>
+            <ul>
+                <li><strong>No proper table headers:</strong> Uses regular &lt;td&gt; cells instead of &lt;th&gt; elements for headers</li>
+                <li><strong>Missing scope attributes:</strong> Merged cells don't specify whether they're column or row headers</li>
+                <li><strong>No table caption:</strong> Screen readers can't announce what the table contains</li>
+                <li><strong>Poor semantic structure:</strong> Assistive technology cannot properly navigate the data relationships</li>
+            </ul>
+        </div>
+
+        <h3>Try This</h3>
+        <ol>
+            <li><strong>Screen Reader Test:</strong> Try navigating this table with a screen reader - notice how difficult it is to understand the relationships between headers and data</li>
+            <li><strong>WAVE Tool:</strong> Run the WAVE accessibility checker on this page to see the structural issues</li>
+            <li><strong>Keyboard Navigation:</strong> Try using Tab and arrow keys to navigate - the experience is confusing</li>
+        </ol>
+
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 6px; margin: 20px 0;">
+            <h4>Workshop Activity</h4>
+            <p><strong>Before showing the improved version:</strong> Ask participants to identify what makes this table difficult to use. Have them imagine trying to understand the data without being able to see the visual layout.</p>
+        </div>
+
+        <p><a href="good-table.html" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">→ See the Accessible Version</a></p>
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Back to Workshop Home</a></p>
+    </footer>
+</body>
+</html>
