@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Examples - Demo Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .navigation {
+            background: #f4f4f4;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 3px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+        
+        .navigation a:hover {
+            background: #e8f4fd;
+        }
+        
+        .page-section {
+            display: none;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .page-section.active {
+            display: block;
+        }
+        
+        .example-label {
+            background: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .good-example .example-label {
+            background: #28a745;
+        }
+        
+        /* Bad table styles */
+        .bad-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        .bad-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        .bad-table .header-row {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        /* Good table styles */
+        .good-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        .good-table th,
+        .good-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .good-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        .good-table caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        
+        /* Bad content styles */
+        .bad-content h1 {
+            font-size: 16px;
+            color: #888;
+        }
+        
+        .bad-content h2 {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .bad-content .fake-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+        }
+        
+        /* Good content styles */
+        .good-content h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .good-content h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        
+        .good-content h3 {
+            color: #5d6d7e;
+        }
+        
+        .content-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Accessibility Examples - Workshop Demo</h1>
+        <p>Use this site to demonstrate accessibility issues and improvements during your workshop.</p>
+    </header>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="#" onclick="showPage('bad-table')">1. Bad Table</a></li>
+            <li><a href="#" onclick="showPage('good-table')">2. Good Table</a></li>
+            <li><a href="#" onclick="showPage('bad-content')">3. Bad Content</a></li>
+            <li><a href="#" onclick="showPage('good-content')">4. Good Content</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page 1: Bad Table -->
+    <section id="bad-table" class="page-section active">
+        <div class="example-label">❌ BAD EXAMPLE</div>
+        <h2>Inaccessible Data Table</h2>
+        <p>This table has several accessibility problems:</p>
+        <ul>
+            <li>No proper table headers (using regular cells instead of &lt;th&gt; elements)</li>
+            <li>Merged cells without proper scope attributes</li>
+            <li>No table caption</li>
+            <li>Screen readers cannot navigate this table properly</li>
+        </ul>
+
+        <table class="bad-table">
+            <tr class="header-row">
+                <td rowspan="2">Department</td>
+                <td colspan="3">Q1 Sales Data</td>
+                <td rowspan="2">Total</td>
+            </tr>
+            <tr class="header-row">
+                <td>January</td>
+                <td>February</td>
+                <td>March</td>
+            </tr>
+            <tr>
+                <td>Marketing</td>
+                <td>$45,000</td>
+                <td>$52,000</td>
+                <td>$48,000</td>
+                <td>$145,000</td>
+            </tr>
+            <tr>
+                <td>Sales</td>
+                <td>$67,000</td>
+                <td>$71,000</td>
+                <td>$69,000</td>
+                <td>$207,000</td>
+            </tr>
+            <tr>
+                <td>Support</td>
+                <td>$23,000</td>
+                <td>$28,000</td>
+                <td>$31,000</td>
+                <td>$82,000</td>
+            </tr>
+        </table>
+
+        <p><strong>Try using a screen reader on this table</strong> - notice how difficult it is to understand the relationships between headers and data cells.</p>
+    </section>
+
+    <!-- Page 2: Good Table -->
+    <section id="good-table" class="page-section good-example">
+        <div class="example-label">✅ GOOD EXAMPLE</div>
+        <h2>Accessible Data Table</h2>
+        <p>This table fixes all the accessibility problems:</p>
+        <ul>
+            <li>Proper &lt;th&gt; elements with scope attributes</li>
+            <li>Descriptive table caption</li>
+            <li>Clear header relationships</li>
+            <li>Screen readers can navigate effectively</li>
+        </ul>
+
+        <table class="good-table">
+            <caption>Q1 2024 Sales Data by Department</caption>
+            <thead>
+                <tr>
+                    <th scope="col" rowspan="2">Department</th>
+                    <th scope="colgroup" colspan="3">Monthly Sales</th>
+                    <th scope="col" rowspan="2">Q1 Total</th>
+                </tr>
+                <tr>
+                    <th scope="col">January</th>
+                    <th scope="col">February</th>
+                    <th scope="col">March</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Marketing</th>
+                    <td>$45,000</td>
+                    <td>$52,000</td>
+                    <td>$48,000</td>
+                    <td>$145,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sales</th>
+                    <td>$67,000</td>
+                    <td>$71,000</td>
+                    <td>$69,000</td>
+                    <td>$207,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">Support</th>
+                    <td>$23,000</td>
+                    <td>$28,000</td>
+                    <td>$31,000</td>
+                    <td>$82,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Screen reader users can now:</strong></p>
+        <ul>
+            <li>Understand what the table contains (caption)</li>
+            <li>Navigate between headers and data cells</li>
+            <li>Hear the appropriate headers when focused on any data cell</li>
+        </ul>
+    </section>
+
+    <!-- Page 3: Bad Content -->
+    <section id="bad-content" class="page-section">
+        <div class="example-label">❌ BAD EXAMPLE</div>
+        <h2>Inaccessible Content</h2>
+        <p>This page demonstrates common content accessibility problems:</p>
+
+        <div class="bad-content">
+            <h1>Course Overview</h1>
+            
+            <div class="fake-header">Learning Objectives</div>
+            <p style="color: #ccc;">By the end of this course, students will be able to identify key concepts and apply them in real-world scenarios.</p>
+            
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%23e0e0e0'/%3E%3Ctext x='200' y='100' text-anchor='middle' fill='%23666' font-size='16'%3EComplex Chart Image%3C/text%3E%3C/svg%3E" class="content-image">
+            
+            <h2>Module 1</h2>
+            <p>This module covers the basics.</p>
+            
+            <div class="fake-header">Assignment Instructions</div>
+            <p style="color: #aaa;">Submit your work by clicking the button below. Make sure to follow all requirements.</p>
+            
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150'%3E%3Crect width='300' height='150' fill='%23f0f0f0'/%3E%3Ctext x='150' y='75' text-anchor='middle' fill='%23999' font-size='14'%3EDecorative Icon%3C/text%3E%3C/svg%3E" class="content-image">
+            
+            <h1>Important Notice</h1>
+            <p style="background: yellow; color: orange;">This is critical information that all students must read!</p>
+        </div>
+
+        <h3>Problems with this content:</h3>
+        <ul>
+            <li><strong>Poor heading hierarchy:</strong> H1 used multiple times, fake headers without proper markup</li>
+            <li><strong>Low contrast text:</strong> Light gray text is hard to read</li>
+            <li><strong>Missing alt text:</strong> Images have no alternative descriptions</li>
+            <li><strong>Poor color contrast:</strong> Yellow background with orange text</li>
+        </ul>
+    </section>
+
+    <!-- Page 4: Good Content -->
+    <section id="good-content" class="page-section good-example">
+        <div class="example-label">✅ GOOD EXAMPLE</div>
+        <h2>Accessible Content</h2>
+        <p>This page demonstrates the same content with accessibility improvements:</p>
+
+        <div class="good-content">
+            <h1>Course Overview</h1>
+            
+            <h2>Learning Objectives</h2>
+            <p>By the end of this course, students will be able to identify key concepts and apply them in real-world scenarios.</p>
+            
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%23e0e0e0'/%3E%3Ctext x='200' y='100' text-anchor='middle' fill='%23666' font-size='16'%3EComplex Chart Image%3C/text%3E%3C/svg%3E" 
+                 alt="Bar chart showing quarterly sales growth: Q1 increased 15%, Q2 increased 23%, Q3 increased 18%, Q4 increased 31%. Overall annual growth was 22%." 
+                 class="content-image">
+            
+            <h2>Module 1: Fundamentals</h2>
+            <p>This module covers the foundational concepts you'll need for the rest of the course.</p>
+            
+            <h3>Assignment Instructions</h3>
+            <p>Submit your work using the submission portal. Your assignment should include:</p>
+            <ul>
+                <li>A written analysis (500-750 words)</li>
+                <li>Supporting data or examples</li>
+                <li>Proper citations in APA format</li>
+            </ul>
+            
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150'%3E%3Crect width='300' height='150' fill='%23f0f0f0'/%3E%3Ctext x='150' y='75' text-anchor='middle' fill='%23999' font-size='14'%3EDecorative Icon%3C/text%3E%3C/svg%3E" 
+                 alt="" 
+                 role="presentation"
+                 class="content-image">
+            
+            <h2>Important Notice</h2>
+            <div style="background: #fff3cd; color: #856404; padding: 15px; border: 1px solid #ffeaa7; border-radius: 5px;">
+                <strong>Important:</strong> This is critical information that all students must read! Please review the updated course policies in your student handbook.
+            </div>
+        </div>
+
+        <h3>Improvements made:</h3>
+        <ul>
+            <li><strong>Proper heading hierarchy:</strong> Single H1, logical H2/H3 structure</li>
+            <li><strong>Good contrast:</strong> All text meets WCAG AA standards</li>
+            <li><strong>Descriptive alt text:</strong> Informative images have detailed descriptions</li>
+            <li><strong>Decorative images marked:</strong> Decorative images have empty alt="" and role="presentation"</li>
+            <li><strong>Accessible color usage:</strong> High contrast warning box with proper styling</li>
+        </ul>
+    </section>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+        
+        // Initialize with first page
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('bad-table');
+        });
+    </script>
+</body>
+</html>
