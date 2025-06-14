@@ -27,11 +27,19 @@
     <main>
         <div class="example-label workshop-example">📝 ALT TEXT WORKSHOP</div>
         
-        <h2>Interactive Alt Text Examples</h2>
-        <p>These examples show real alt text from workplace documents, expert feedback on common problems, and improved versions. Click "Show Improved Version" to reveal the final result after expert review.</p>
+        <h2>Alt Text Examples</h2>
+        <p>These examples show real alt text from workplace documents, expert feedback on common problems, and improved versions.</p>
+        
+
+
+        <!-- Modal for zoomed images -->
+        <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+            <span class="modal-close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
 
         <div class="alt-text-example">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f0f8ff'/%3E%3Cg%3E%3Crect x='50' y='200' width='80' height='100' fill='%23654321'/%3E%3Crect x='150' y='150' width='100' height='150' fill='%23d2691e'/%3E%3Crect x='270' y='180' width='80' height='120' fill='%23daa520'/%3E%3Cpolygon points='90,200 90,150 130,120 130,200' fill='%23696969'/%3E%3Cpolygon points='200,150 200,100 250,70 250,150' fill='%23708090'/%3E%3Cpolygon points='310,180 310,130 350,100 350,180' fill='%23778899'/%3E%3Ccircle cx='80' cy='50' r='25' fill='%23ffb366'/%3E%3Cpath d='M 80 25 L 85 40 L 100 40 L 88 50 L 93 65 L 80 57 L 67 65 L 72 50 L 60 40 L 75 40 Z' fill='%23ff6b35'/%3E%3Ctext x='200' y='280' text-anchor='middle' fill='%23333' font-size='12'%3EConstruction Site Safety%3C/text%3E%3C/g%3E%3C/svg%3E" alt="Construction site with supervisor and workers">
+            <img src="media/image5.png" alt="Construction site with supervisor and workers" onclick="openImageModal(this)">
             
             <div class="original-alt">
                 <strong>Original Alt Text:</strong> "A supervisor with a hazard document in his hand, planning safe work. Two construction members are in the back picking up lumber building a house"
@@ -49,7 +57,7 @@
         </div>
 
         <div class="alt-text-example">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f5f5f5'/%3E%3Ccircle cx='150' cy='150' r='40' fill='%23ffdbac'/%3E%3Ccircle cx='140' cy='140' r='3' fill='%23333'/%3E%3Ccircle cx='160' cy='140' r='3' fill='%23333'/%3E%3Cpath d='M 140 160 Q 150 170 160 160' stroke='%23333' stroke-width='2' fill='none'/%3E%3Cpath d='M 150 110 Q 130 100 120 110 Q 110 120 120 130 Q 130 120 150 110' fill='%23333'/%3E%3Cellipse cx='300' cy='100' rx='60' ry='20' fill='%23e6e6fa'/%3E%3Ctext x='300' y='105' text-anchor='middle' fill='%23666' font-size='24'%3E?%3C/text%3E%3Ctext x='200' y='280' text-anchor='middle' fill='%23333' font-size='12'%3EPerson Thinking%3C/text%3E%3C/svg%3E" alt="Person with thought bubble containing question mark">
+            <img src="media/image4.png" alt="Person with thought bubble containing question mark" onclick="openImageModal(this)">
             
             <div class="original-alt">
                 <strong>Original Alt Text:</strong> "A man is sitting down, facing the left in deep thought. He has thinking bubbles above him, on the right with a question mark in it."
@@ -67,7 +75,7 @@
         </div>
 
         <div class="alt-text-example">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f0f8ff'/%3E%3Cg%3E%3Cpath d='M 50 250 L 350 250 L 300 50 L 100 50 Z' fill='%23ddd' stroke='%23999' stroke-width='2'/%3E%3Crect x='120' y='180' width='20' height='30' fill='%238b4513'/%3E%3Crect x='160' y='170' width='20' height='40' fill='%23daa520'/%3E%3Crect x='200' y='160' width='20' height='50' fill='%23cd853f'/%3E%3Ccircle cx='90' cy='200' r='15' fill='%23ffdbac'/%3E%3Ccircle cx='170' cy='190' r='15' fill='%23deb887'/%3E%3Ccircle cx='250' cy='180' r='15' fill='%23f5deb3'/%3E%3Crect x='270' y='120' width='15' height='60' fill='%23696969'/%3E%3Ctext x='200' y='280' text-anchor='middle' fill='%23333' font-size='12'%3ETeamwork Puzzle%3C/text%3E%3C/g%3E%3C/svg%3E" alt="People working on puzzle together">
+            <img src="media/image7.png" alt="People working on puzzle together" onclick="openImageModal(this)">
             
             <div class="original-alt">
                 <strong>Original Alt Text:</strong> "Four people stand in a circle facing each other, appearing to have a conversation. Starting on the left and moving clockwise, there is a person with long dark hair holding a blue folder, a person with short dark hair whose arms are folded with one hand on their chin, a person with short red hair and an artificial leg holding a folder with one arm outstretched towards the centre of the circle, and a person with short dark hair with both arms outstretched."
@@ -85,7 +93,7 @@
         </div>
 
         <div class="alt-text-example">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%23f5f5f5'/%3E%3Ccircle cx='120' cy='100' r='30' fill='%23ffdbac'/%3E%3Crect x='115' y='80' width='10' height='15' fill='%23ff6b35'/%3E%3Ccircle cx='115' cy='85' r='2' fill='%23333'/%3E%3Ccircle cx='125' cy='85' r='2' fill='%23333'/%3E%3Crect x='100' y='130' width='40' height='50' fill='%234169e1'/%3E%3Crect x='70' y='140' width='20' height='40' fill='%23daa520'/%3E%3Crect x='150' y='140' width='20' height='40' fill='%23daa520'/%3E%3Crect x='160' y='120' width='30' height='20' fill='%23fff'/%3E%3Cpath d='M 160 120 L 190 120 L 180 140 L 170 140 Z' fill='%23fff'/%3E%3Ccircle cx='280' cy='100' r='30' fill='%23d2b48c'/%3E%3Cpath d='M 280 130 L 270 160 L 290 160 Z' fill='%23654321'/%3E%3Ctext x='200' y='190' text-anchor='middle' fill='%23333' font-size='12'%3EWorkplace Interaction%3C/text%3E%3C/svg%3E" alt="Workplace interaction between supervisor and worker">
+            <img src="media/image6.png" alt="Workplace interaction between supervisor and worker" onclick="openImageModal(this)">
             
             <div class="original-alt">
                 <strong>Original Alt Text:</strong> (No alt text provided)
@@ -99,24 +107,6 @@
             <button class="reveal-button" onclick="toggleImproved(this)">Show Improved Version</button>
             <div class="improved-alt">
                 <strong>Improved Alt Text:</strong> "A person in a hard hat holds a clipboard with jagged lines coming out of it, and stands facing a slumped person looking at the ground."
-            </div>
-        </div>
-
-        <div class="alt-text-example">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f5f5f5'/%3E%3Ccircle cx='200' cy='150' r='25' fill='%23ffdbac'/%3E%3Crect x='190' y='130' width='20' height='10' fill='%23654321'/%3E%3Ccircle cx='195' cy='135' r='2' fill='%23333'/%3E%3Ccircle cx='205' cy='135' r='2' fill='%23333'/%3E%3Crect x='180' y='175' width='40' height='60' fill='%23333'/%3E%3Crect x='175' y='185' width='50' height='8' fill='%23fff'/%3E%3Crect x='160' y='200' width='20' height='35' fill='%23654321'/%3E%3Crect x='220' y='200' width='20' height='35' fill='%23654321'/%3E%3Cpath d='M 150 190 L 180 180 L 170 195 Z' fill='%23c0c0c0'/%3E%3Crect x='100' y='250' width='200' height='30' fill='%238b4513'/%3E%3Ctext x='200' y='290' text-anchor='middle' fill='%23333' font-size='12'%3EProfessional at Table%3C/text%3E%3C/svg%3E" alt="Professional person at table">
-            
-            <div class="original-alt">
-                <strong>Original Alt Text:</strong> "A professionally dressed man sits at a table."
-            </div>
-            
-            <div class="feedback-box">
-                <h4>🔍 Expert Feedback</h4>
-                <p>What are the details that make the man "look[...] professional"?</p>
-            </div>
-            
-            <button class="reveal-button" onclick="toggleImproved(this)">Show Improved Version</button>
-            <div class="improved-alt">
-                <strong>Improved Alt Text:</strong> "A person with neat, short hair wearing a dark suit and tie sits at a table."
             </div>
         </div>
 
@@ -153,13 +143,40 @@
             if (improvedDiv.classList.contains('show')) {
                 improvedDiv.classList.remove('show');
                 button.textContent = 'Show Improved Version';
-                button.style.background = '#28a745';
+                button.style.background = '#1e7e34';
             } else {
                 improvedDiv.classList.add('show');
                 button.textContent = 'Hide Improved Version';
                 button.style.background = '#6c757d';
             }
         }
+
+        function openImageModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            
+            modal.style.display = 'block';
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Restore body scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+            }
+        });
     </script>
 </body>
 </html>
